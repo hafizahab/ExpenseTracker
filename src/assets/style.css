@@ -1,0 +1,242 @@
+/* Importing the Lato font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* Defining CSS custom properties for box shadow */
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Applying a border-box sizing model to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Styling for the body element */
+body {
+  /* Setting background color */
+  background-color: #e2f1ff;
+  /* Flex container settings for centering content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Setting minimum height to full viewport height */
+  min-height: 100vh;
+  /* Removing default margin */
+  margin: 0;
+  /* Applying Lato font family */
+  font-family: 'Lato', sans-serif;
+  /* Setting default font size */
+  font-size: 18px;
+}
+
+/* Container style */
+.container {
+  width: 400px;
+  display: grid;
+  gap: 20px;
+}
+
+/* Styling for heading level 1 */
+h1 {
+  /* Adding spacing between characters */
+  letter-spacing: 1px;
+  /* Removing default margin */
+  margin: 0;
+}
+
+/* Styling for heading level 3 */
+h3 {
+  /* Adding a bottom border */
+  border-bottom: 1px solid #bbb;
+  /* Adding space above and below */
+  margin: 40px 0 10px;
+  padding-bottom: 8px;
+}
+
+/* Styling for heading level 4 */
+h4 {
+  /* Removing default margin */
+  margin: 0;
+  /* Transforming text to uppercase */
+  text-transform: uppercase;
+}
+
+/* Styling for a container holding income and expense */
+.inc-exp-container {
+  /* Setting background color */
+  background-color: #fff;
+  /* Applying box shadow */
+  box-shadow: var(--box-shadow);
+  /* Adding padding */
+  padding: 20px;
+  /* Arranging items horizontally */
+  display: flex;
+  justify-content: space-between;
+  /* Adding margin above and below */
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* Styling for each column inside income and expense container */
+.inc-exp-container > div {
+  /* Flexbox setting: each column takes equal space */
+  flex: 1;
+  /* Centering text horizontally */
+  text-align: center;
+}
+
+/* Styling for the first column in the income and expense container */
+.inc-exp-container > div:first-of-type {
+  /* Adding a right border */
+  border-right: 1px solid #dedede;
+}
+
+/* Styling for elements with class 'money' */
+.money {
+  /* Setting font size */
+  font-size: 20px;
+  /* Adding spacing between characters */
+  letter-spacing: 1px;
+  /* Adding margin above and below */
+  margin: 5px 0;
+}
+
+/* Styling for elements with class 'plus' */
+.money.plus {
+  /* Setting text color for positive values */
+  color: #6c5ce7;
+}
+
+/* Styling for elements with class 'minus' */
+.money.minus {
+  /* Setting text color for negative values */
+  color: #ff7f50;
+}
+
+/* Styling for label elements */
+label {
+  /* Displaying as inline-block */
+  display: inline-block;
+  /* Adding margin above and below */
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* Styling for text and number input fields */
+input[type='text'],
+input[type='number'] {
+  /* Adding border */
+  border: 1px solid #dedede;
+  /* Adding border radius */
+  border-radius: 2px;
+  /* Displaying as block level element */
+  display: block;
+  /* Setting font size */
+  font-size: 16px;
+  /* Adding padding */
+  padding: 10px;
+  /* Setting width to 100% of container */
+  width: 100%;
+}
+
+/* Styling for buttons */
+.btn {
+  /* Setting cursor style to pointer */
+  cursor: pointer;
+  /* Setting background color */
+  background-color: #9c88ff;
+  /* Applying box shadow */
+  box-shadow: var(--box-shadow);
+  /* Setting text color */
+  color: #fff;
+  /* Removing border */
+  border: 0;
+  /* Displaying as block level element */
+  display: block;
+  /* Setting font size */
+  font-size: 16px;
+  /* Adding margin above, none below, large margin below */
+  margin: 10px 0 30px;
+  /* Adding padding */
+  padding: 10px;
+  /* Setting width to 100% of container */
+  width: 100%;
+}
+
+/* Removing focus outline for buttons */
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+/* Styling for lists */
+.list {
+  /* Removing default list style */
+  list-style-type: none;
+  /* Removing padding */
+  padding: 0;
+  /* Adding margin below */
+  margin-bottom: 40px;
+}
+
+/* Styling for list items */
+.list li {
+  /* Setting background color */
+  background-color: #fff;
+  /* Applying box shadow */
+  box-shadow: var(--box-shadow);
+  /* Setting text color */
+  color: #333;
+  /* Arranging items horizontally */
+  display: flex;
+  justify-content: space-between;
+  /* Positioning relative to parent */
+  position: relative;
+  /* Adding padding */
+  padding: 10px;
+  /* Adding margin above and below */
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/* Styling for income list items */
+.list li.plus {
+  /* Adding a right border color for positive values */
+  border-left: 5px solid #6c5ce7;
+}
+
+/* Styling for expense list items */
+.list li.minus {
+  /* Adding a right border color for negative values */
+  border-left: 5px solid #ff7f50;
+}
+
+/* Styling for delete button */
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 10px 10px;
+  position: absolute;
+  top: 50%;
+  right: -10px; /* Changed from left: 0; to right: 0; */
+  transform: translate(100%, -50%); /* Changed from translate(-100%, -50%); to translate(100%, -50%); */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fa-solid {
+  font-size: large;
+}
+/* Styling for delete button on hover */
+.list li:hover .delete-btn {
+  /* Changing opacity to fully visible */
+  opacity: 1;
+}
+
